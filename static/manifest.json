@@ -1,6 +1,6 @@
 {
-  "name": "klks-pay",
-  "short_name": "klks-pay",
+  "name": "vuejs-blockstack",
+  "short_name": "vuejs-blockstack",
   "start_url": "localhost:8080",
   "icons": [
     {

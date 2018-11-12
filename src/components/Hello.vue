@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-      Ready to start with Blockstack project
+      Ready to start with your Blockstack project!<br>
       <button class="btn btn-default" @click.prevent="signInWithBlockstack">Sign In With Blockstack</button>
   </div>
 </template>
