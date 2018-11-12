@@ -1,11 +1,12 @@
 <template>
   <div class="hello">
-      Ready to start with your Blockstack project!<br>
-      <button class="btn btn-default" @click.prevent="signInWithBlockstack">Sign In With Blockstack</button>
+      <h1>XSight Plaftorm</h1>
+      <button class="btn btn-primary" @click.prevent="signInWithBlockstack">Sign In With Blockstack</button>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'hello',
   data () {
@@ -17,9 +18,9 @@ export default {
     signInWithBlockstack () {
       const blockstack = this.blockstack
       blockstack.redirectToSignIn(
-        process.env.APP_URL + '/#/dashboard',
+        process.env.APP_URL + '/',
         process.env.APP_URL + '/static/manifest.json',
-        ['store_write']
+        ['store_write', 'publish_data']
       )
     }
   }

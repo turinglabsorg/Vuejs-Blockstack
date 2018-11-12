@@ -7,7 +7,6 @@
 </template>
 
 <script>
-  import { UserBus } from './main.js'
   export default {
     name: 'app',
     components: {},
@@ -15,9 +14,9 @@
       const blockstack = this.blockstack
       if (blockstack.isUserSignedIn()) {
         this.userData = blockstack.loadUserData()
-        this.user = new blockstack.Person(this.userData.profile)
+        this.user.person = new blockstack.Person(this.userData.profile)
         this.user.username = this.userData.username
-        UserBus.$emit('loggedUser', this.user)
+        this.$cookies.set('user', this.user, 365)
         this.$router.push('dashboard')
       } else if (blockstack.isSignInPending()) {
         blockstack.handlePendingSignIn()
@@ -29,7 +28,10 @@
     data () {
       return {
         blockstack: window.blockstack,
-        user: null
+        user: {
+          person: '',
+          username: ''
+        }
       }
     }
   }

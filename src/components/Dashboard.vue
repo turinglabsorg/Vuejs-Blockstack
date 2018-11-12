@@ -1,11 +1,10 @@
 <template>
   <div class="hello">
-      Now you're logged with Blockstack
+      Now you're logged with Blockstack as {{user.username}}
   </div>
 </template>
 
 <script>
-import { UserBus } from '../main.js'
 export default {
   name: 'dashboard',
   data () {
@@ -14,14 +13,11 @@ export default {
     }
   },
   mounted () {
-    if (!this.user) {
+    if (!this.$cookies.get('user')) {
       this.$router.push('/')
+    } else {
+      this.user = this.$cookies.get('user')
     }
-  },
-  created () {
-    UserBus.$on('loggedUser', user => {
-      this.user = user
-    })
   }
 }
 </script>

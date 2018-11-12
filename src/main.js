@@ -7,8 +7,6 @@ import router from './router'
 window.blockstack = require('blockstack')
 window.axios = require('axios')
 
-export const UserBus = new Vue()
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
