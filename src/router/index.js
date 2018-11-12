@@ -25,11 +25,6 @@ export default new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
-    },
-    {
-      path: '/qrscan',
-      name: 'QRCodeScan',
-      component: QRCodeScan
     }
   ]
 })
