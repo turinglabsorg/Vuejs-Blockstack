@@ -1,6 +1,6 @@
 # vuejs-blockstack project
 
-> A Vue.js project with Blockstack integration. Added Routing, Axios and Bootstrap Too. Useful if you want to start a clean project with Blockstack and Vue. Forked by TuringLabs from PWA VueJS starter (thank you guys!)
+> A Vue.js project with Blockstack integration. Added Routing, Axios and Bootstrap too. Useful if you want to start a clean project with Blockstack and Vue. Forked by TuringLabs from PWA VueJS starter (thank you guys!)
 
 ## Build Setup
 
